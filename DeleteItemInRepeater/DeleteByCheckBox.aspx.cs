@@ -55,6 +55,19 @@ public partial class DeleteByCheckBox : System.Web.UI.Page
     }
     protected void Repeater1_ItemDataBound(object sender, RepeaterItemEventArgs e)
     {
+        //check if the member is administrator
+        //if (Request.Cookies["memberid"].Value != null) add this if to avoid null reference excption
+        //{
+        //    if (Convert.ToInt32(Request.Cookies["memberid"].Value) != 55684 && Convert.ToInt32(Request.Cookies["memberid"].Value) != 30003)
+        //    {
+
+        //    }
+        //    else
+        //    {
+        //        CheckBox ckb = e.Item.FindControl("ckbDelete") as CheckBox;
+        //        ckb.Visible = true;
+        //    }
+        //}
         CheckBox cbx = e.Item.FindControl("CheckBox1") as CheckBox;
         cbx.Visible = true;
     }

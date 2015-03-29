@@ -47,7 +47,21 @@ public partial class DeleteItemInRepeater_Default : System.Web.UI.Page
     }
     protected void Repeater1_ItemDataBound(object sender, RepeaterItemEventArgs e)
     {
-            Button btn = e.Item.FindControl("btnDeleteTopic") as Button;
-            btn.Visible = true;
+        //check if the member is administrator
+        //if (Request.Cookies["memberid"].Value != null) add this if to avoid null reference excption
+        //{
+        //    if (Convert.ToInt32(Request.Cookies["memberid"].Value) != 55684 && Convert.ToInt32(Request.Cookies["memberid"].Value) != 30003)
+        //    {
+
+        //    }
+        //    else
+        //    {
+        //        CheckBox ckb = e.Item.FindControl("ckbDelete") as CheckBox;
+        //        ckb.Visible = true;
+        //    }
+        //}
+        
+        Button btn = e.Item.FindControl("btnDeleteTopic") as Button;
+        btn.Visible = true;
     }
 }
